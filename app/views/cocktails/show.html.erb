@@ -1,5 +1,6 @@
 <ul class="list-group">
 <li class="list-group-item"><%= @cocktail.name %></li>
+<%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill %>
   <% @cocktail.doses.each do |dose| %>
     <li class="list-group-item">Description: <%= dose.description %></li>
     <li class="list-group-item">Ingredient: <%= dose.ingredient.name %></li>
